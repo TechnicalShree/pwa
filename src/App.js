@@ -18,7 +18,7 @@ function App() {
         console.log("This is it :-", permission);
         return getToken(messaging, {
           vapidKey:
-            "BFsj_BhdbjVUwTmm_A9Tr26eQ4LTbi0EgApsu-hyeJecXls3m7XHaqWozJdnNiJZArv3qjzWyrXVb5o4cGMaXUY",
+            "BAUYnrIKYp8R1X8CT7SiM2Iit0ijIvUwTaNBEIKzDEY6Nh2e--t9GVv2zg56x47ETJW1hCb3_aE6Z1qjf2rlBAg",
         });
       })
       .then((token) => console.log("Token :- ", token))

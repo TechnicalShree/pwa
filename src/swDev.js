@@ -6,7 +6,7 @@ export default function swDev() {
         return res.pushManager.subscribe({
           userVisibleOnly: true,
           applicationServerKey:
-            "BGtkbcjrO12YMoDuq2sCQeHlu47uPx3SHTgFKZFYiBW8Qr0D9vgyZSZPdw6_4ZFEI9Snk1VEAj2qTYI1I1YxBXE",
+            "BAUYnrIKYp8R1X8CT7SiM2Iit0ijIvUwTaNBEIKzDEY6Nh2e--t9GVv2zg56x47ETJW1hCb3_aE6Z1qjf2rlBAg",
         });
       });
     });
@@ -16,7 +16,7 @@ export default function swDev() {
 // export function vapid() {
 //   const determineAppServerKey = () => {
 //     let vapidKey =
-//       "BGtkbcjrO12YMoDuq2sCQeHlu47uPx3SHTgFKZFYiBW8Qr0D9vgyZSZPdw6_4ZFEI9Snk1VEAj2qTYI1I1YxBXE";
+//       "BAUYnrIKYp8R1X8CT7SiM2Iit0ijIvUwTaNBEIKzDEY6Nh2e--t9GVv2zg56x47ETJW1hCb3_aE6Z1qjf2rlBAg";
 //     return urlBase64ToUnit8Array(vapidKey);
 //   };
 
