@@ -16,7 +16,7 @@ export default function User() {
       .catch((e) => {
         !isOnline && setUsers(JSON.parse(localStorage.getItem("usersData")));
       });
-  }, []);
+  }, [isOnline]);
 
   return (
     <div className="d-flex text-secondary flex-column text-centervw-100">

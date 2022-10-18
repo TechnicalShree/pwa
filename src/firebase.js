@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getMessaging, getToken } from "firebase/messaging";
+// import { getMessaging, getToken } from "firebase/messaging";
 // import { vapid } from "../swDev";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -23,32 +23,32 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 export default app;
 
-function requestPermission() {
-  console.log("Requesting permission...");
-  Notification.requestPermission().then((permission) => {
-    if (permission === "granted") {
-      console.log("Notification permission granted.");
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-      const messaging = getMessaging(app);
+// function requestPermission() {
+//   console.log("Requesting permission...");
+//   Notification.requestPermission().then((permission) => {
+//     if (permission === "granted") {
+//       console.log("Notification permission granted.");
+//       // Initialize Firebase
+//       const app = initializeApp(firebaseConfig);
+//       const messaging = getMessaging(app);
 
-      // Add the public key generated from the console here.
-      getToken(messaging, {
-        vapidKey:
-          "BFsj_BhdbjVUwTmm_A9Tr26eQ4LTbi0EgApsu-hyeJecXls3m7XHaqWozJdnNiJZArv3qjzWyrXVb5o4cGMaXUY",
-      })
-        .then((currToken) => {
-          if (currToken) {
-            console.log("CurrToken :- ", currToken);
-          } else {
-            console.log("Can't get that token....");
-          }
-        })
-        .catch((e) => console.warn(e));
-    } else {
-      console.log("Don't have permission.");
-    }
-  });
-}
+//       // Add the public key generated from the console here.
+//       getToken(messaging, {
+//         vapidKey:
+//           "BFsj_BhdbjVUwTmm_A9Tr26eQ4LTbi0EgApsu-hyeJecXls3m7XHaqWozJdnNiJZArv3qjzWyrXVb5o4cGMaXUY",
+//       })
+//         .then((currToken) => {
+//           if (currToken) {
+//             console.log("CurrToken :- ", currToken);
+//           } else {
+//             console.log("Can't get that token....");
+//           }
+//         })
+//         .catch((e) => console.warn(e));
+//     } else {
+//       console.log("Don't have permission.");
+//     }
+//   });
+// }
 
 // requestPermission();
